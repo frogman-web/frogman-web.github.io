@@ -3,12 +3,14 @@ import {motion} from 'framer-motion';
 
 const links = [
   {href: "/", name: "Inicio" },
-  {href: "/", name: "Servicios" },
-  {href: "/", name: "Nosotros" },
-  {href: "/", name: "Galería" },
-  {href: "/", name: "Contacto" },
+  {href: '/buceo', name: "Buceo Profesional" },
+  {href: '/robotica', name: "Robótica Submarina" },
+  {href: '/nosotros', name: "Nosotros" },
+  {href: '#clientes', name: "Clientes" },
+  {href: '/calidad', name: "Política de Calidad" },
+  {href: '#contacto', name: "Contacto" },
 ];
-
+{/*
 const letterAnim = {
   initial: {
     y: "100%",
@@ -45,13 +47,14 @@ const getLetter = (name) => {
   return letters;
 };
 
+*/}
 const NavList = () => {
   return (
     <ul className="flex flex-col gap-8 font-primary text-4xl font-semibold text-accent items-center uppercase">
       {links.map((link, index) => {
         return (
-          <Link href={link.href} key={index} className="flex overflow-hidden hover:text-white transition-all">
-            {getLetter(link.name)}
+          <Link href={link.href} key={index} scroll={true} className="flex overflow-hidden hover:text-white transition-all">
+            {link.name}
           </Link>
         );
       })}

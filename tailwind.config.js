@@ -5,6 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  important: true,
   theme: {
     container: {
       center: true,
@@ -17,7 +18,7 @@ module.exports = {
       xl: "1430px",
     },
     fontFamily: {
-      primary: "var(--font-cormorant_upright)",
+      primary: "var(--font-oswald)",
       secondary: "var(--font-open_sans)",
     },
     extend: {
@@ -34,9 +35,10 @@ module.exports = {
         },
       },
       backgroundImage: {
+        companies:"url('/assets/companies/background.jpg')",
         hero_overlay: "url('/assets/hero/hero-overlay.png')",
         opening_hours: "url('/assets/opening-hours/bg.png')",
-        footer: "url('/assets/footer/bg.png')",
+        footer: "url('/assets/footer/bg.jpg')",
       },
     },
   },

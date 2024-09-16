@@ -1,11 +1,13 @@
 import { Oswald, Open_Sans } from "next/font/google";
 import Header from "./components/Header";
 import "./globals.css";
+import "../build.css";
+import Footer from "./components/Footer";
 
 const oswald = Oswald({ 
   subsets: ["latin"], 
   weight: ["300", "400", "500", "600", "700" ],
-  variable: "--font-cormorant_upright",
+  variable: "--font-oswald",
 });
 
 const open_sans = Open_Sans({ 
@@ -22,9 +24,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={`${oswald.variable} ${open_sans.variable}`}>
+      <body id="app" className={`${oswald.variable} ${open_sans.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

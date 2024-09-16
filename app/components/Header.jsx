@@ -27,7 +27,7 @@ const Header = () => {
                     {/* nav trigger btn */}
                     <button 
                         onClick={() => setNavActive(!navActive)} 
-                        className="w-8 text-accent relative flex items-center justify-center z-[60] outline-none"
+                        className="w-8 text-white relative flex items-center justify-center z-[60] outline-none"
                     >
                         {/* 1 */}
                         <span 
